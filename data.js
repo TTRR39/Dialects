@@ -12,7 +12,7 @@ const dialectData = [
 
   {
     word: "夜老个",
-    pronunciation: "jam˧˥",
+    pronunciation: "/ie21 lɔ35 kə0/",
     speaker: "Speaker 01",
     exampleDialect: "夜老个黑家俺们出去咧。",
     exampleMandarin: "昨天晚上我们出去了。",
