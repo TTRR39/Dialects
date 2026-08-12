@@ -1,19 +1,23 @@
 const dialectData = [
   {
-    word: "食",
-    pronunciation: "sik˧˥",
+    word: "今儿个",
+    pronunciation: "/tɕir21 kə4/˥",
     speaker: "Speaker 01",
-    exampleDialect: "我食咗饭。",
-    exampleMandarin: "我吃过饭。",
-    mandarin: "吃"
+    exampleDialect: "今儿个着冷。",
+    exampleMandarin: "今天很冷。",
+    mandarin: "今天",
+    categoty:"时间词（temporal terms）",
+    wordsID: "001"
   },
 
   {
-    word: "饮",
+    word: "夜老个",
     pronunciation: "jam˧˥",
     speaker: "Speaker 01",
-    exampleDialect: "我饮水。",
-    exampleMandarin: "我喝水。",
-    mandarin: "喝"
+    exampleDialect: "夜老个黑家俺们出去咧。",
+    exampleMandarin: "昨天晚上我们出去了。",
+    mandarin: "昨天",
+     categoty:"时间词（temporal terms）",
+    wordsID: "002"
   }
 ];
