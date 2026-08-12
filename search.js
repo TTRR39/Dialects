@@ -67,18 +67,19 @@ function searchWords() {
     return;
   }
 
-  const filtered = dialectData.filter(item => {
+const filtered = dialectData.filter(item => {
 
-    return (
-      item.word.toLowerCase().includes(query) ||
-      item.pronunciation.toLowerCase().includes(query) ||
-      item.mandarin.toLowerCase().includes(query) ||
-      item.exampleDialect.toLowerCase().includes(query) ||
-            item.category.toLowerCase().includes(query) ||
-      item.exampleMandarin.toLowerCase().includes(query)
-    );
+  return (
+    item.word.toLowerCase().includes(query) ||
+    item.pronunciation.toLowerCase().includes(query) ||
+    item.mandarin.toLowerCase().includes(query) ||
+    item.exampleDialect.toLowerCase().includes(query) ||
+    item.exampleMandarin.toLowerCase().includes(query) ||
+    item.categoty.toLowerCase().includes(query) ||
+    item.wordsID.toLowerCase().includes(query)
+  );
 
-  });
+});
 
   displayWords(filtered);
 }
