@@ -22,7 +22,7 @@ function displayWords(data) {
       <h2>${item.word}</h2>
 
       <p class="pronunciation">
-        /${item.pronunciation}/
+        ${item.pronunciation}
       </p>
 
       <p>
@@ -45,9 +45,14 @@ function displayWords(data) {
         ${item.exampleMandarin}
       </p>
 
-           <p>
-        <strong>词类：</strong>
+      <p>
+        <strong>Category：</strong>
         ${item.category}
+      </p>
+
+      <p>
+        <strong>Word ID：</strong>
+        ${item.wordsID}
       </p>
     `;
 
@@ -81,6 +86,7 @@ function searchWords() {
 
   displayWords(filtered);
 }
+
 
 searchButton.addEventListener("click", searchWords);
 
