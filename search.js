@@ -44,6 +44,11 @@ function displayWords(data) {
         <strong>普通话：</strong>
         ${item.exampleMandarin}
       </p>
+
+           <p>
+        <strong>词类：</strong>
+        ${item.category}
+      </p>
     `;
 
     results.appendChild(card);
@@ -69,6 +74,7 @@ function searchWords() {
       item.pronunciation.toLowerCase().includes(query) ||
       item.mandarin.toLowerCase().includes(query) ||
       item.exampleDialect.toLowerCase().includes(query) ||
+            item.category.toLowerCase().includes(query) ||
       item.exampleMandarin.toLowerCase().includes(query)
     );
 
