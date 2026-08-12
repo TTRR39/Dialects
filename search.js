@@ -58,32 +58,29 @@ function displayWords(data) {
 
 function searchWords() {
 
-  const query = searchInput.value
-    .trim()
-    .toLowerCase();
+  const query = searchInput.value.trim().toLowerCase();
 
   if (query === "") {
     displayWords(dialectData);
     return;
   }
 
-const filtered = dialectData.filter(item => {
+  const filtered = dialectData.filter(item => {
 
-  return (
-    item.word.toLowerCase().includes(query) ||
-    item.pronunciation.toLowerCase().includes(query) ||
-    item.mandarin.toLowerCase().includes(query) ||
-    item.exampleDialect.toLowerCase().includes(query) ||
-    item.exampleMandarin.toLowerCase().includes(query) ||
-    item.category.toLowerCase().includes(query) ||
-    item.wordsID.toLowerCase().includes(query)
-  );
+    return (
+      String(item.word || "").toLowerCase().includes(query) ||
+      String(item.pronunciation || "").toLowerCase().includes(query) ||
+      String(item.mandarin || "").toLowerCase().includes(query) ||
+      String(item.exampleDialect || "").toLowerCase().includes(query) ||
+      String(item.exampleMandarin || "").toLowerCase().includes(query) ||
+      String(item.category || "").toLowerCase().includes(query) ||
+      String(item.wordsID || "").toLowerCase().includes(query)
+    );
 
-});
+  });
 
   displayWords(filtered);
 }
-
 
 searchButton.addEventListener("click", searchWords);
 
