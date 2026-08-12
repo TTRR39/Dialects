@@ -75,7 +75,7 @@ const filtered = dialectData.filter(item => {
     item.mandarin.toLowerCase().includes(query) ||
     item.exampleDialect.toLowerCase().includes(query) ||
     item.exampleMandarin.toLowerCase().includes(query) ||
-    item.categoty.toLowerCase().includes(query) ||
+    item.category.toLowerCase().includes(query) ||
     item.wordsID.toLowerCase().includes(query)
   );
 
