@@ -1,7 +1,12 @@
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
+const categorySelect = document.getElementById("categorySelect");
 const results = document.getElementById("results");
 
+
+// =========================
+// 显示词条
+// =========================
 
 function displayWords(data) {
 
@@ -21,7 +26,8 @@ function displayWords(data) {
     card.innerHTML = `
       <h2>${item.word}</h2>
 
-      <p class="pronunciation">
+      <p>
+        <strong>读音：</strong>
         ${item.pronunciation}
       </p>
 
@@ -47,12 +53,12 @@ function displayWords(data) {
 
       <p>
         <strong>Category：</strong>
-        ${item.category}
+        ${item.category || ""}
       </p>
 
       <p>
         <strong>Word ID：</strong>
-        ${item.wordsID}
+        ${item.wordsID || ""}
       </p>
     `;
 
@@ -61,35 +67,74 @@ function displayWords(data) {
 }
 
 
+// =========================
+// 自动生成 Category 下拉菜单
+// =========================
+
+function loadCategories() {
+
+  const categories = [...new Set(
+    dialectData
+      .map(item => item.category)
+      .filter(category => category)
+  )];
+
+  categories.forEach(category => {
+
+    const option = document.createElement("option");
+
+    option.value = category;
+    option.textContent = category;
+
+    categorySelect.appendChild(option);
+  });
+}
+
+
+// =========================
+// 搜索
+// =========================
+
 function searchWords() {
 
   const query = searchInput.value.trim().toLowerCase();
 
-  if (query === "") {
-    displayWords(dialectData);
-    return;
-  }
+  const selectedCategory = categorySelect.value;
 
   const filtered = dialectData.filter(item => {
 
-    return (
-      String(item.word || "").toLowerCase().includes(query) ||
-      String(item.pronunciation || "").toLowerCase().includes(query) ||
-      String(item.mandarin || "").toLowerCase().includes(query) ||
-      String(item.exampleDialect || "").toLowerCase().includes(query) ||
-      String(item.exampleMandarin || "").toLowerCase().includes(query) ||
-      String(item.category || "").toLowerCase().includes(query) ||
-      String(item.wordsID || "").toLowerCase().includes(query)
-    );
+    // 先检查 category
+    const categoryMatch =
+      selectedCategory === "" ||
+      item.category === selectedCategory;
 
+    // 再检查关键词
+    const searchableText = `
+      ${item.word}
+      ${item.pronunciation}
+      ${item.mandarin}
+      ${item.speaker}
+      ${item.exampleDialect}
+      ${item.exampleMandarin}
+      ${item.wordsID}
+    `.toLowerCase();
+
+    const searchMatch =
+      query === "" ||
+      searchableText.includes(query);
+
+    return categoryMatch && searchMatch;
   });
 
   displayWords(filtered);
 }
 
 
-searchButton.addEventListener("click", searchWords);
+// =========================
+// 事件
+// =========================
 
+searchButton.addEventListener("click", searchWords);
 
 searchInput.addEventListener("keydown", function(event) {
 
@@ -99,5 +144,15 @@ searchInput.addEventListener("keydown", function(event) {
 
 });
 
+
+// 选择 Category 后自动搜索
+categorySelect.addEventListener("change", searchWords);
+
+
+// =========================
+// 初始化
+// =========================
+
+loadCategories();
 
 displayWords(dialectData);
