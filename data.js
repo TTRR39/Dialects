@@ -6,7 +6,7 @@ const dialectData = [
     exampleDialect: "今儿个着冷。",
     exampleMandarin: "今天很冷。",
     mandarin: "今天",
-    categoty:"时间词（temporal terms）",
+    category:"时间词（temporal terms）",
     wordsID: "001"
   },
 
@@ -17,7 +17,7 @@ const dialectData = [
     exampleDialect: "夜老个黑家俺们出去咧。",
     exampleMandarin: "昨天晚上我们出去了。",
     mandarin: "昨天",
-     categoty:"时间词（temporal terms）",
+     category:"时间词（temporal terms）",
     wordsID: "002"
   }
 ];
