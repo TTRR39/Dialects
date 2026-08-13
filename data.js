@@ -19,5 +19,15 @@ const dialectData = [
     mandarin: "昨天",
      category:"时间词（temporal terms）",
     wordsID: "002"
+  },
+    {
+    word: "",
+    pronunciation: "",
+    speaker: "Speaker 01",
+    exampleDialect: "。",
+    exampleMandarin: "。",
+    mandarin: "昨天",
+     category:"时间词（temporal terms）",
+    wordsID: "002"
   }
 ];
