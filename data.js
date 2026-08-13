@@ -7,7 +7,7 @@ const dialectData = [
     exampleMandarin: "今天很冷。",
     mandarin: "今天",
     category:"时间词（temporal terms）",
-    wordsID: "001"
+    wordsID: "by1t001"
   },
 
   {
@@ -18,7 +18,7 @@ const dialectData = [
     exampleMandarin: "昨天晚上我们出去了。",
     mandarin: "昨天",
      category:"时间词（temporal terms）",
-    wordsID: "002"
+    wordsID: "by1t002"
   },
     {
     word: "赶明儿",
@@ -28,7 +28,7 @@ const dialectData = [
     exampleMandarin: "我们明天去赶集吧。",
     mandarin: "明天",
      category:"时间词（temporal terms）",
-    wordsID: "003"
+    wordsID: "by1t003"
   },
   {
     word: "前儿个",
@@ -38,7 +38,7 @@ const dialectData = [
     exampleMandarin: "我前天在家待着呢。",
     mandarin: "前天",
      category:"时间词（temporal terms）",
-    wordsID: "004"
+    wordsID: "by1t004"
   },
   {
     word: "过了明儿",
@@ -48,7 +48,7 @@ const dialectData = [
     exampleMandarin: "后天再去。",
     mandarin: "后天",
      category:"时间词（temporal terms）",
-    wordsID: "005"
+    wordsID: "by1t005"
   },
   {
     word: "黑家",
@@ -58,7 +58,7 @@ const dialectData = [
     exampleMandarin: "晚上吃什么呀。",
     mandarin: "晚上",
      category:"时间词（temporal terms）",
-    wordsID: "006"
+    wordsID: "by1t006"
   },
   {
     word: "早清",
@@ -68,7 +68,7 @@ const dialectData = [
     exampleMandarin: "早上才回家。",
     mandarin: "早上",
      category:"时间词（temporal terms）",
-    wordsID: "007"
+    wordsID: "by1t007"
   },
   {
     word: "大早清",
@@ -78,6 +78,36 @@ const dialectData = [
     exampleMandarin: "今天清晨起雾了。",
     mandarin: "清晨",
      category:"时间词（temporal terms）",
-    wordsID: "008"
+    wordsID: "by1t008"
+  },
+  {
+     word: "家去",
+    pronunciation: "/tɕia45 tɕhi0/",
+    speaker: "Speaker 01",
+    exampleDialect: "早清才家去。",
+    exampleMandarin: "早上才回家。",
+    mandarin: "回家",
+     category:"动词（verbs）",
+    wordsID: "by1V001"
+  },
+  {
+       word: "家来",
+    pronunciation: "/tɕia45 lɛ0/",
+    speaker: "Speaker 01",
+    exampleDialect: "家来吧。",
+    exampleMandarin: "回来。",
+    mandarin: "回来",
+     category:"动词（verbs）",
+    wordsID: "by1V002"
+  },
+  {
+       word: "寻",
+    pronunciation: "/sin22/",
+    speaker: "Speaker 01",
+    exampleDialect: "寻人帮忙。",
+    exampleMandarin: "找人帮忙。",
+    mandarin: "找",
+     category:"动词（verbs）",
+    wordsID: "by1V003"
   }
 ];
